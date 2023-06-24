@@ -3,13 +3,18 @@ import 'package:flutter/material.dart';
 import 'package:unired_telegram/core/router/router.dart';
 
 void main() async {
+  // Initialize widgets flutter binding
   WidgetsFlutterBinding.ensureInitialized();
+  // Initialize easy localization package
   await EasyLocalization.ensureInitialized();
+  // Change Language
   runApp(EasyLocalization(
     startLocale: const Locale('en'),
     saveLocale: true,
     supportedLocales: const [
+      // English
       Locale('en'),
+      // Russian
       Locale('ru'),
     ],
     path: 'lib/core/lang',

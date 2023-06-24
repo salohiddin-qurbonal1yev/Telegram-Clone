@@ -61,7 +61,8 @@ class OtpScreen extends StatelessWidget {
                   controller: context.watch<OtpProvider>().otpController,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.center,
-                  length: 5, //  pin code length
+                  // Otp code length
+                  length: 5,
                   // default
                   defaultPinTheme: PinTheme(
                     textStyle: const TextStyle(fontSize: 16),
@@ -72,7 +73,7 @@ class OtpScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(8),
                     ),
                   ),
-                  // on focused
+                  // On focused
                   focusedPinTheme: PinTheme(
                     textStyle: const TextStyle(fontSize: 16),
                     width: 50,
@@ -112,7 +113,7 @@ class OtpScreen extends StatelessWidget {
           ),
         ),
         floatingActionButton: FloatingActionButton(
-          backgroundColor: Colors.blue.shade300,
+          backgroundColor: const Color(0xff50a8eb),
           onPressed: () {
             Navigator.pushNamed(context, '/');
           },

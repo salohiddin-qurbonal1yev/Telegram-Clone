@@ -108,7 +108,7 @@ class AuthScreen extends StatelessWidget {
           ),
         ),
         floatingActionButton: FloatingActionButton(
-          backgroundColor: Colors.blue.shade300,
+          backgroundColor: const Color(0xff50a8eb),
           onPressed: () {
             Navigator.push(
               context,

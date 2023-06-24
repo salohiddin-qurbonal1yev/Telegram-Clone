@@ -10,5 +10,13 @@
     "otpEmail": "Check Your Email",
     "otpTitle": "Please enter the code we have sent to your email \n salohiddink65@gmail.com.",
     "otpEmailWait": "Email will be reset in 6 days.",
-    "otpSms": "Reset now via SMS"
+    "otpSms": "Reset now via SMS",
+    "drawerNewGroup": "New Group",
+    "drawerContacts": "Contacts",
+    "drawerCalls": "Calls",
+    "drawerPeopleNearby": "People Nearby",
+    "drawerSavedMessages": "Saved Messages",
+    "drawerSettings": "Settings",
+    "drawerInviteFriends": "Invite Friends",
+    "drawerTelegramFeatures": "Telegram Features"
 }

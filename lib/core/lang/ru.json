@@ -1,5 +1,5 @@
 {
-    "telegram": "Телеграм",
+    "telegram": "Telegram",
     "startTitle": "Самый быстрый мессенджер в мире. \n Бесплатный и безопасный",
     "startLang": "Continue in English",
     "startButton": "Начать общение",
@@ -10,5 +10,13 @@
     "otpEmail": "Проверьте почту",
     "otpTitle": "Введите код, который пришёл на электронную почту salohiddink65@gmail.com.",
     "otpEmailWait": "Почта будет сброшена через 6 дней.",
-    "otpSms": "Сбросить сейчас через СМС"
+    "otpSms": "Сбросить сейчас через СМС",
+    "drawerNewGroup": "Создать группу",
+    "drawerContacts": "Контакты",
+    "drawerCalls": "Звонки",
+    "drawerPeopleNearby": "Люди рядом",
+    "drawerSavedMessages": "Избранное",
+    "drawerSettings": "Настройки",
+    "drawerInviteFriends": "Пригласить друзей",
+    "drawerTelegramFeatures": "Возможности Telegram"
 }

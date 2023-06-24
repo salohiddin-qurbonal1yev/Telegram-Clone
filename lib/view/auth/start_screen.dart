@@ -1,6 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:unired_telegram/core/extensions/build_context_extension.dart';
+import 'package:unired_telegram/provider/language_provider.dart';
 import 'package:unired_telegram/view/auth/auth_screen.dart';
 
 class StartScreen extends StatelessWidget {
@@ -8,6 +10,13 @@ class StartScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    return ChangeNotifierProvider(
+      create: (context) => LanguageProvider(),
+      builder: (context, child) => _scaffold(context),
+    );
+  }
+
+  Scaffold _scaffold(BuildContext context) {
     return Scaffold(
       body: SafeArea(
         child: Column(
@@ -50,12 +59,26 @@ class StartScreen extends StatelessWidget {
             SizedBox(
               height: context.height * 0.23,
             ),
-            Text(
-              'startLang'.tr(),
-              style: const TextStyle(
-                fontWeight: FontWeight.w400,
-                fontSize: 18,
-                color: Colors.blue,
+            // CHANGE LANGUAGE
+            InkWell(
+              onTap: () async {
+                Provider.of<LanguageProvider>(context, listen: false)
+                    .changeLang();
+                await context.setLocale(
+                  Locale(
+                    Provider.of<LanguageProvider>(context, listen: false).langs[
+                        Provider.of<LanguageProvider>(context, listen: false)
+                            .currentIndex],
+                  ),
+                );
+              },
+              child: Text(
+                'startLang'.tr(),
+                style: const TextStyle(
+                  fontWeight: FontWeight.w400,
+                  fontSize: 18,
+                  color: Colors.blue,
+                ),
               ),
             ),
             SizedBox(
@@ -68,7 +91,9 @@ class StartScreen extends StatelessWidget {
                 height: context.height * 0.055,
                 child: ElevatedButton(
                   style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(Colors.blue.shade300),
+                    backgroundColor: MaterialStateProperty.all(
+                      const Color(0xff50a8eb),
+                    ),
                   ),
                   onPressed: () async {
                     Navigator.pushAndRemoveUntil(
