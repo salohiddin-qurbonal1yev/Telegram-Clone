@@ -1,0 +1,14 @@
+{
+    "telegram": "Telegram",
+    "startTitle": "The world's fastest messaging app.\n It is free and secure",
+    "startLang": "Продолжить на русском",
+    "startButton": "Start Messaging",
+    "authPhoneNumber": "Your phone number",
+    "authTitle": "Please confirm your country code \n and enter your phone number.",
+    "authInputPhoneNumber": "Phone number",
+    "authCountry": "Country",
+    "otpEmail": "Check Your Email",
+    "otpTitle": "Please enter the code we have sent to your email \n salohiddink65@gmail.com.",
+    "otpEmailWait": "Email will be reset in 6 days.",
+    "otpSms": "Reset now via SMS"
+}

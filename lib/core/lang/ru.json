@@ -1,0 +1,14 @@
+{
+    "telegram": "Телеграм",
+    "startTitle": "Самый быстрый мессенджер в мире. \n Бесплатный и безопасный",
+    "startLang": "Continue in English",
+    "startButton": "Начать общение",
+    "authPhoneNumber": "Номер телефона",
+    "authTitle": "Проверьте код страны и введите свой номер \n телефона.",
+    "authInputPhoneNumber": "Номер телефона",
+    "authCountry": "Страна",
+    "otpEmail": "Проверьте почту",
+    "otpTitle": "Введите код, который пришёл на электронную почту salohiddink65@gmail.com.",
+    "otpEmailWait": "Почта будет сброшена через 6 дней.",
+    "otpSms": "Сбросить сейчас через СМС"
+}
