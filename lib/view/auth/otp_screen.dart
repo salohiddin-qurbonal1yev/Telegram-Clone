@@ -6,7 +6,8 @@ import 'package:unired_telegram/core/extensions/build_context_extension.dart';
 import 'package:unired_telegram/provider/otp_provider.dart';
 
 class OtpScreen extends StatelessWidget {
-  const OtpScreen({super.key});
+  const OtpScreen({super.key, required this.otpCode});
+  final String otpCode;
 
   @override
   Widget build(BuildContext context) {
@@ -112,7 +113,9 @@ class OtpScreen extends StatelessWidget {
         ),
         floatingActionButton: FloatingActionButton(
           backgroundColor: Colors.blue.shade300,
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, '/');
+          },
           child: const Icon(Icons.arrow_forward_outlined),
         ),
       );

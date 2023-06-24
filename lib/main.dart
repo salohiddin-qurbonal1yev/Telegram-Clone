@@ -1,7 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:unired_telegram/view/auth/auth_screen.dart';
-import 'package:unired_telegram/view/auth/start_screen.dart';
+import 'package:unired_telegram/core/router/router.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -28,7 +27,8 @@ class MyApp extends StatelessWidget {
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
       debugShowCheckedModeBanner: false,
-      home: const StartScreen(),
+      onGenerateRoute: RouteGenerator.router.onGenerate,
+      initialRoute: 'start',
     );
   }
 }

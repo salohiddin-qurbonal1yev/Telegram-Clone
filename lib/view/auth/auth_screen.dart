@@ -113,7 +113,7 @@ class AuthScreen extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const OtpScreen(),
+                builder: (context) => const OtpScreen(otpCode: '12345'),
               ),
             );
           },
