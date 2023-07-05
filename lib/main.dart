@@ -7,6 +7,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   // Initialize easy localization package
   await EasyLocalization.ensureInitialized();
+
   // Change Language
   runApp(EasyLocalization(
     startLocale: const Locale('en'),
@@ -23,7 +24,7 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

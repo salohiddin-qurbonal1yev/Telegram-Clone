@@ -1,14 +1,16 @@
+// ignore_for_file: no_leading_underscores_for_local_identifiers, unused_local_variable
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_native_contact_picker/flutter_native_contact_picker.dart';
 import 'package:unired_telegram/core/extensions/build_context_extension.dart';
 
 class HomeDrawer extends StatelessWidget {
-  const HomeDrawer({super.key});
+  const HomeDrawer({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final FlutterContactPicker _contactPicker = FlutterContactPicker();
+    int index = 0;
     Contact? _contact;
     return Drawer(
       child: ListView(
@@ -21,20 +23,22 @@ class HomeDrawer extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const CircleAvatar(
+                CircleAvatar(
                   radius: 40,
-                  backgroundImage:
-                      NetworkImage("https://source.unsplash.com/random/?5"),
+                  backgroundImage: NetworkImage(
+                    "https://source.unsplash.com/random/$index",
+                  ),
                 ),
                 SizedBox(
                   height: context.height * 0.01,
                 ),
                 const Text(
-                  "Ilyos",
+                  'Ilyos',
                   style: TextStyle(
-                      fontWeight: FontWeight.w500,
-                      fontSize: 16,
-                      color: Colors.white),
+                    fontWeight: FontWeight.w500,
+                    fontSize: 16,
+                    color: Colors.white,
+                  ),
                 ),
                 SizedBox(
                   height: context.height * 0.01,

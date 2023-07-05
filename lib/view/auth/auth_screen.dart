@@ -2,7 +2,8 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:unired_telegram/core/extensions/build_context_extension.dart';
-import 'package:unired_telegram/provider/auth_provider.dart';
+import 'package:unired_telegram/provider/auth/auth_provider.dart';
+import 'package:unired_telegram/provider/code_phone_number_provider.dart';
 import 'package:unired_telegram/view/auth/otp_screen.dart';
 
 class AuthScreen extends StatelessWidget {
@@ -110,12 +111,21 @@ class AuthScreen extends StatelessWidget {
         floatingActionButton: FloatingActionButton(
           backgroundColor: const Color(0xff50a8eb),
           onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const OtpScreen(otpCode: '12345'),
-              ),
-            );
+            if (context
+                .watch<CodePhoneNumberProvider>()
+                .codePhoneNumberController
+                .text
+                .isNotEmpty) {
+              Navigator.pushAndRemoveUntil(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const OtpScreen(otpCode: '12345'),
+                ),
+                (route) => false,
+              );
+            } else {
+              debugPrint('TextFormField ichiga hech nima kiritilmadi!!!');
+            }
           },
           child: const Icon(Icons.arrow_forward),
         ),

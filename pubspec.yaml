@@ -40,6 +40,8 @@ dependencies:
   pinput: ^2.2.31
   flutter_native_contact_picker: ^0.0.4
   dio: ^5.2.1+1
+  telegram_bot_api: ^0.0.3
+  telegram_client: ^0.4.28
 
 dev_dependencies:
   flutter_test:
