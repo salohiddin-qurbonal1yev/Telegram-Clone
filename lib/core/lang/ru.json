@@ -7,6 +7,7 @@
     "authTitle": "Проверьте код страны и введите свой номер \n телефона.",
     "authInputPhoneNumber": "Номер телефона",
     "authCountry": "Страна",
+    "authChooseCountry":"Выберите страну",
     "otpEmail": "Проверьте почту",
     "otpTitle": "Введите код, который пришёл на электронную \n почту salohiddink65@gmail.com",
     "otpEmailWait": "Почта будет сброшена через 6 дней.",

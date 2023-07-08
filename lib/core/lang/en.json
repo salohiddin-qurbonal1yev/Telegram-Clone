@@ -7,6 +7,7 @@
     "authTitle": "Please confirm your country code \n and enter your phone number.",
     "authInputPhoneNumber": "Phone number",
     "authCountry": "Country",
+    "authChooseCountry":"Choose a country",
     "otpEmail": "Check Your Email",
     "otpTitle": "Please enter the code we have sent to your email \n salohiddink65@gmail.com.",
     "otpEmailWait": "Email will be reset in 6 days.",

@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:unired_telegram/core/extensions/build_context_extension.dart';
+import 'package:unired_telegram/core/widgets/loading_widget.dart';
 import 'package:unired_telegram/data/model/users_model.dart';
 import 'package:unired_telegram/data/service/get_users_service.dart';
 import 'package:unired_telegram/view/drawer/home_driwer.dart';
@@ -17,6 +18,12 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   void initState() {
     debugPrint('Welcome to Home Page');
     super.initState();
+  }
+
+  @override
+  void dispose() {
+    debugPrint('Exit to Home Page');
+    super.dispose();
   }
 
   @override
@@ -38,11 +45,11 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
         builder: (context, AsyncSnapshot snapshot) {
           if (!snapshot.hasData) {
             return const Center(
-              child: CircularProgressIndicator.adaptive(),
+              child: LoadingWidget(),
             );
           } else if (snapshot.hasError) {
             return Center(
-              child: Text(snapshot.error.toString()),
+              child: Text('Error ${snapshot.error}'),
             );
           } else {
             List<UsersModel> data = snapshot.data as List<UsersModel>;
