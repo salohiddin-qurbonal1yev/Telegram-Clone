@@ -58,7 +58,7 @@ class OtpScreen extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: context.width * 0.2),
                 child: Pinput(
-                  controller: context.watch<OtpProvider>().otpController,
+                  controller: context.read<OtpProvider>().otpController,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   // Otp code length
@@ -115,7 +115,11 @@ class OtpScreen extends StatelessWidget {
         floatingActionButton: FloatingActionButton(
           backgroundColor: const Color(0xff50a8eb),
           onPressed: () {
-            Navigator.pushNamed(context, '/');
+            if (context.read<OtpProvider>().otpController.text.length == 5) {
+              Navigator.pushNamed(context, '/');
+            } else {
+              debugPrint('Otp code error');
+            }
           },
           child: const Icon(Icons.arrow_forward_outlined),
         ),

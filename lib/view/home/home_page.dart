@@ -21,12 +21,6 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   }
 
   @override
-  void dispose() {
-    debugPrint('Exit to Home Page');
-    super.dispose();
-  }
-
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: const HomeDrawer(),
