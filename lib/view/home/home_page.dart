@@ -46,23 +46,18 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               child: Text('Error ${snapshot.error}'),
             );
           } else {
-            List<UsersModel> data = snapshot.data as List<UsersModel>;
+            // List<UsersModel> data = snapshot.data as List<UsersModel>;
             return ListView.builder(
               scrollDirection: Axis.vertical,
-              itemCount: data.length,
+              itemCount: 10,
               itemBuilder: (context, index) {
                 return Column(
                   children: [
                     ListTile(
-                      leading: CircleAvatar(
-                        backgroundImage: NetworkImage(
-                          "https://source.unsplash.com/random/$index",
-                        ),
-                        radius: 30,
-                      ),
-                      title: Text(
-                        data[index].name.toString(),
-                        style: const TextStyle(
+                      leading: const CircleAvatar(radius: 30),
+                      title: const Text(
+                        "data[index].name.toString()",
+                        style: TextStyle(
                           fontWeight: FontWeight.w500,
                           fontSize: 18,
                         ),
@@ -71,9 +66,9 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                         padding: EdgeInsets.symmetric(
                           vertical: context.height * 0.01,
                         ),
-                        child: Text(
-                          data[index].company!.catchPhrase.toString(),
-                          style: const TextStyle(
+                        child: const Text(
+                          "data[index].company!.catchPhrase.toString()",
+                          style: TextStyle(
                             fontWeight: FontWeight.w400,
                             fontSize: 15,
                             overflow: TextOverflow.ellipsis,

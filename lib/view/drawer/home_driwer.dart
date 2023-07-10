@@ -23,17 +23,12 @@ class HomeDrawer extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                CircleAvatar(
-                  radius: 40,
-                  backgroundImage: NetworkImage(
-                    "https://source.unsplash.com/random/$index",
-                  ),
-                ),
+                const CircleAvatar(radius: 40),
                 SizedBox(
                   height: context.height * 0.01,
                 ),
                 const Text(
-                  'Ilyos',
+                  'Salohiddin',
                   style: TextStyle(
                     fontWeight: FontWeight.w500,
                     fontSize: 16,
@@ -44,7 +39,7 @@ class HomeDrawer extends StatelessWidget {
                   height: context.height * 0.01,
                 ),
                 const Text(
-                  "+998943613555",
+                  "+998941636067",
                   style: TextStyle(color: Colors.white70),
                 )
               ],
