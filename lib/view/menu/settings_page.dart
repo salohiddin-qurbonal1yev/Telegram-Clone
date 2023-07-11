@@ -107,12 +107,25 @@ class SettingsPage extends StatelessWidget {
                                 fontSize: 15.5,
                                 fontWeight: FontWeight.w500),
                           ),
+                          SizedBox(height: context.height * 0.015),
+                          const Text(
+                            "+998 941636067",
+                            style: TextStyle(
+                                fontSize: 16, fontWeight: FontWeight.w400),
+                          ),
+                          SizedBox(height: context.height * 0.008),
+                          Text(
+                            "menuSettingsPhoneNumber".tr(),
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.grey.shade600,
+                            ),
+                          ),
                           SizedBox(height: context.height * 0.01),
-                          const Text("+998 941636067"),
-                          Text("menuSettingsPhoneNumber".tr()),
                           Padding(
                             padding:
-                                EdgeInsets.only(left: context.width * 0.01),
+                                EdgeInsets.only(left: context.width * 0.003),
                             child: Container(
                               width: double.infinity,
                               height: context.height * 0.001,
@@ -120,11 +133,22 @@ class SettingsPage extends StatelessWidget {
                                   const BoxDecoration(color: Color(0xffD9D9D9)),
                             ),
                           ),
-                          const Text("@qurbonaliyev_66"),
-                          Text("menuSettingsUserName".tr()),
+                          SizedBox(height: context.height * 0.01),
+                          const Text(
+                            "@qurbonaliyev_66",
+                            style: TextStyle(
+                              fontSize: 16,
+                            ),
+                          ),
+                          SizedBox(height: context.height * 0.008),
+                          Text(
+                            "menuSettingsUserName".tr(),
+                            style: TextStyle(color: Colors.grey.shade600),
+                          ),
+                          SizedBox(height: context.height * 0.01),
                           Padding(
                             padding:
-                                EdgeInsets.only(left: context.width * 0.01),
+                                EdgeInsets.only(left: context.width * 0.003),
                             child: Container(
                               width: double.infinity,
                               height: context.height * 0.001,
@@ -132,32 +156,52 @@ class SettingsPage extends StatelessWidget {
                                   const BoxDecoration(color: Color(0xffD9D9D9)),
                             ),
                           ),
-                          const Text("🌙"),
-                          Text("menuSettingsBio".tr()),
+                          SizedBox(height: context.height * 0.01),
+                          const Text(
+                            "Flutter Developer",
+                            style: TextStyle(fontSize: 16),
+                          ),
+                          SizedBox(height: context.height * 0.008),
+                          Text(
+                            "menuSettingsBio".tr(),
+                            style: TextStyle(color: Colors.grey.shade600),
+                          ),
+                          SizedBox(height: context.height * 0.01),
                         ],
                       ),
                     ),
                     Container(
                       width: double.infinity,
                       height: context.height * 0.01,
-                      decoration: const BoxDecoration(color: Color(0xff999999)),
+                      decoration:
+                          BoxDecoration(color: Colors.blueGrey.shade100),
                     ),
                     Padding(
                       padding: EdgeInsets.only(left: context.width * 0.04),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
+                          SizedBox(height: context.height * 0.025),
                           Text("drawerSettings".tr(),
-                              style: const TextStyle(color: Colors.blue)),
+                              style: const TextStyle(
+                                  color: Colors.blue,
+                                  fontSize: 15.5,
+                                  fontWeight: FontWeight.w500)),
+                          SizedBox(height: context.height * 0.015),
                           Row(
                             children: [
-                              Icon(Icons.message_outlined),
-                              Text("menuSettingsChatSettings".tr()),
+                              Icon(Icons.message_outlined,
+                                  size: 25, color: Colors.grey.shade600),
+                              SizedBox(width: context.width * 0.045),
+                              Text(
+                                "menuSettingsChatSettings".tr(),
+                                style: const TextStyle(fontSize: 17),
+                              ),
                             ],
                           ),
+                          SizedBox(height: context.height * 0.013),
                           Padding(
-                            padding:
-                                EdgeInsets.only(left: context.width * 0.01),
+                            padding: EdgeInsets.only(left: context.width * 0.1),
                             child: Container(
                               width: double.infinity,
                               height: context.height * 0.001,
@@ -166,15 +210,21 @@ class SettingsPage extends StatelessWidget {
                               ),
                             ),
                           ),
+                          SizedBox(height: context.height * 0.013),
                           Row(
                             children: [
-                              Icon(Icons.lock_outline_rounded),
-                              Text("menuSettingsPrivacy".tr()),
+                              Icon(Icons.lock_outline_rounded,
+                                  size: 25, color: Colors.grey.shade600),
+                              SizedBox(width: context.width * 0.045),
+                              Text(
+                                "menuSettingsPrivacy".tr(),
+                                style: const TextStyle(fontSize: 17),
+                              ),
                             ],
                           ),
+                          SizedBox(height: context.height * 0.013),
                           Padding(
-                            padding:
-                                EdgeInsets.only(left: context.width * 0.01),
+                            padding: EdgeInsets.only(left: context.width * 0.1),
                             child: Container(
                               width: double.infinity,
                               height: context.height * 0.001,
@@ -183,15 +233,21 @@ class SettingsPage extends StatelessWidget {
                               ),
                             ),
                           ),
+                          SizedBox(height: context.height * 0.013),
                           Row(
                             children: [
-                              // Icon(Icons.),
-                              Text("menuSettingsPrivacy".tr()),
+                              Icon(Icons.notifications_none_outlined,
+                                  size: 25, color: Colors.grey.shade600),
+                              SizedBox(width: context.width * 0.045),
+                              Text(
+                                "menuSettingsNotifications".tr(),
+                                style: const TextStyle(fontSize: 17),
+                              ),
                             ],
                           ),
+                          SizedBox(height: context.height * 0.013),
                           Padding(
-                            padding:
-                                EdgeInsets.only(left: context.width * 0.01),
+                            padding: EdgeInsets.only(left: context.width * 0.1),
                             child: Container(
                               width: double.infinity,
                               height: context.height * 0.001,
@@ -200,15 +256,21 @@ class SettingsPage extends StatelessWidget {
                               ),
                             ),
                           ),
+                          SizedBox(height: context.height * 0.013),
                           Row(
                             children: [
-                              Icon(Icons.lock_outline_rounded),
-                              Text("menuSettingsPrivacy".tr()),
+                              Icon(Icons.data_usage_outlined,
+                                  size: 25, color: Colors.grey.shade600),
+                              SizedBox(width: context.width * 0.045),
+                              Text(
+                                "menuSettingsData".tr(),
+                                style: const TextStyle(fontSize: 17),
+                              ),
                             ],
                           ),
+                          SizedBox(height: context.height * 0.013),
                           Padding(
-                            padding:
-                                EdgeInsets.only(left: context.width * 0.01),
+                            padding: EdgeInsets.only(left: context.width * 0.1),
                             child: Container(
                               width: double.infinity,
                               height: context.height * 0.001,
@@ -217,15 +279,21 @@ class SettingsPage extends StatelessWidget {
                               ),
                             ),
                           ),
+                          SizedBox(height: context.height * 0.013),
                           Row(
                             children: [
-                              Icon(Icons.lock_outline_rounded),
-                              Text("menuSettingsPrivacy".tr()),
+                              Icon(Icons.battery_charging_full_outlined,
+                                  size: 25, color: Colors.grey.shade600),
+                              SizedBox(width: context.width * 0.045),
+                              Text(
+                                "menuSettingsPowerSaving".tr(),
+                                style: const TextStyle(fontSize: 17),
+                              ),
                             ],
                           ),
+                          SizedBox(height: context.height * 0.013),
                           Padding(
-                            padding:
-                                EdgeInsets.only(left: context.width * 0.01),
+                            padding: EdgeInsets.only(left: context.width * 0.1),
                             child: Container(
                               width: double.infinity,
                               height: context.height * 0.001,
@@ -234,15 +302,21 @@ class SettingsPage extends StatelessWidget {
                               ),
                             ),
                           ),
+                          SizedBox(height: context.height * 0.013),
                           Row(
                             children: [
-                              Icon(Icons.lock_outline_rounded),
-                              Text("menuSettingsPrivacy".tr()),
+                              Icon(Icons.folder_open_rounded,
+                                  size: 25, color: Colors.grey.shade600),
+                              SizedBox(width: context.width * 0.045),
+                              Text(
+                                "menuSettingsChatFolders".tr(),
+                                style: const TextStyle(fontSize: 17),
+                              ),
                             ],
                           ),
+                          SizedBox(height: context.height * 0.013),
                           Padding(
-                            padding:
-                                EdgeInsets.only(left: context.width * 0.01),
+                            padding: EdgeInsets.only(left: context.width * 0.1),
                             child: Container(
                               width: double.infinity,
                               height: context.height * 0.001,
@@ -251,15 +325,21 @@ class SettingsPage extends StatelessWidget {
                               ),
                             ),
                           ),
+                          SizedBox(height: context.height * 0.013),
                           Row(
                             children: [
-                              Icon(Icons.lock_outline_rounded),
-                              Text("menuSettingsPrivacy".tr()),
+                              Icon(Icons.devices,
+                                  size: 25, color: Colors.grey.shade600),
+                              SizedBox(width: context.width * 0.045),
+                              Text(
+                                "menuSettingsDevices".tr(),
+                                style: const TextStyle(fontSize: 17),
+                              ),
                             ],
                           ),
+                          SizedBox(height: context.height * 0.013),
                           Padding(
-                            padding:
-                                EdgeInsets.only(left: context.width * 0.01),
+                            padding: EdgeInsets.only(left: context.width * 0.1),
                             child: Container(
                               width: double.infinity,
                               height: context.height * 0.001,
@@ -268,28 +348,144 @@ class SettingsPage extends StatelessWidget {
                               ),
                             ),
                           ),
-                          Row(
-                            children: [
-                              Icon(Icons.lock_outline_rounded),
-                              Text("menuSettingsPrivacy".tr()),
-                            ],
-                          ),
-                          Padding(
-                            padding:
-                                EdgeInsets.only(left: context.width * 0.01),
-                            child: Container(
-                              width: double.infinity,
-                              height: context.height * 0.001,
-                              decoration: const BoxDecoration(
-                                color: Color(0xffD9D9D9),
-                              ),
+                          SizedBox(height: context.height * 0.013),
+                          // On language add Inkwell (){}
+                          InkWell(
+                            onTap: () {},
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Row(
+                                  children: [
+                                    Icon(Icons.language_outlined,
+                                        size: 25, color: Colors.grey.shade600),
+                                    SizedBox(width: context.width * 0.045),
+                                    Text(
+                                      "menuSettingsLanguage".tr(),
+                                      style: const TextStyle(fontSize: 17),
+                                    ),
+                                  ],
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(
+                                      right: context.width * 0.04),
+                                  child: const Text(
+                                    "English",
+                                    style: TextStyle(
+                                        fontSize: 16, color: Colors.blue),
+                                  ),
+                                ),
+                              ],
                             ),
                           ),
+                          SizedBox(height: context.height * 0.01),
                         ],
                       ),
                     ),
-                    SizedBox(
-                      height: context.height * 0.1,
+                    Container(
+                      width: double.infinity,
+                      height: context.height * 0.01,
+                      decoration:
+                          BoxDecoration(color: Colors.blueGrey.shade100),
+                    ),
+                    SizedBox(height: context.height * 0.015),
+                    Padding(
+                      padding: EdgeInsets.only(left: context.width * 0.04),
+                      child: Row(
+                        children: [
+                          Icon(Icons.star,
+                              size: 28, color: Colors.deepPurple.shade300),
+                          SizedBox(width: context.width * 0.045),
+                          const Text("Telegram Premium",
+                              style: TextStyle(fontSize: 17)),
+                        ],
+                      ),
+                    ),
+                    SizedBox(height: context.height * 0.015),
+                    Container(
+                      width: double.infinity,
+                      height: context.height * 0.01,
+                      decoration:
+                          BoxDecoration(color: Colors.blueGrey.shade100),
+                    ),
+                    SizedBox(height: context.height * 0.025),
+                    Padding(
+                      padding: EdgeInsets.only(left: context.width * 0.04),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "menuSettingsHelp".tr(),
+                            style: const TextStyle(
+                                color: Colors.blue,
+                                fontSize: 15.5,
+                                fontWeight: FontWeight.w500),
+                          ),
+                          SizedBox(height: context.height * 0.015),
+                          Row(
+                            children: [
+                              Icon(Icons.question_answer_sharp,
+                                  size: 25, color: Colors.grey.shade600),
+                              SizedBox(width: context.width * 0.045),
+                              Text(
+                                "menuSettingsAskQuestion".tr(),
+                                style: const TextStyle(fontSize: 17),
+                              ),
+                            ],
+                          ),
+                          SizedBox(height: context.height * 0.01),
+                          Padding(
+                            padding: EdgeInsets.only(left: context.width * 0.1),
+                            child: Container(
+                              width: double.infinity,
+                              height: context.height * 0.001,
+                              decoration:
+                                  const BoxDecoration(color: Color(0xffD9D9D9)),
+                            ),
+                          ),
+                          SizedBox(height: context.height * 0.01),
+                          Row(
+                            children: [
+                              Icon(Icons.question_mark_outlined,
+                                  size: 25, color: Colors.grey.shade600),
+                              SizedBox(width: context.width * 0.045),
+                              Text(
+                                "menuSettingsFAQ".tr(),
+                                style: const TextStyle(fontSize: 17),
+                              ),
+                            ],
+                          ),
+                          SizedBox(height: context.height * 0.01),
+                          Padding(
+                            padding: EdgeInsets.only(left: context.width * 0.1),
+                            child: Container(
+                              width: double.infinity,
+                              height: context.height * 0.001,
+                              decoration:
+                                  const BoxDecoration(color: Color(0xffD9D9D9)),
+                            ),
+                          ),
+                          SizedBox(height: context.height * 0.01),
+                          Row(
+                            children: [
+                              Icon(Icons.library_add_check_outlined,
+                                  size: 25, color: Colors.grey.shade600),
+                              SizedBox(width: context.width * 0.045),
+                              Text(
+                                "menuSettingsPrivacyPolicy".tr(),
+                                style: const TextStyle(fontSize: 17),
+                              ),
+                            ],
+                          ),
+                          SizedBox(height: context.height * 0.015),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      width: double.infinity,
+                      height: context.height * 0.03,
+                      decoration:
+                          BoxDecoration(color: Colors.blueGrey.shade100),
                     ),
                   ],
                 ),
