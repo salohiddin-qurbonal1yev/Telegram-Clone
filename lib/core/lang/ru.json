@@ -38,5 +38,7 @@
   "menuSettingsHelp": "Помощь",
   "menuSettingsAskQuestion": "Задать вопрос",
   "menuSettingsFAQ": "Вопросы о Telegram",
-  "menuSettingsPrivacyPolicy": "Политика конфиденциальности"
+  "menuSettingsPrivacyPolicy": "Политика конфиденциальности",
+  "menuNewGroupMembers": "до 200000 участников",
+  "menuNewGroupTextField": "Ково бы Вы хотели пригласить?"
 }

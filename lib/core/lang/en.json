@@ -38,5 +38,7 @@
   "menuSettingsHelp": "Help",
   "menuSettingsAskQuestion": "Ask a Question",
   "menuSettingsFAQ": "Telegram FAQ",
-  "menuSettingsPrivacyPolicy": "Privacy Policy"
+  "menuSettingsPrivacyPolicy": "Privacy Policy",
+  "menuNewGroupMembers": "up to 200000 members",
+  "menuNewGroupTextField": "Who would you like to add?"
 }
