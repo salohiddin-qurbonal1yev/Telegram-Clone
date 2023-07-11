@@ -56,121 +56,9 @@ class _AuthScreenState extends State<AuthScreen> {
                 SizedBox(
                   height: context.height * 0.04,
                 ),
-                // InkWell(
-                //   onTap: () {
-                //     // _Show modal bottom sheet
-                //     showModalBottomSheet(
-                //       isScrollControlled: true,
-                //       context: context,
-                //       shape: const RoundedRectangleBorder(
-                //         borderRadius:
-                //             BorderRadius.vertical(top: Radius.circular(15)),
-                //       ),
-                //       builder: (BuildContext context) {
-                //         return SizedBox(
-                //           height: 550.0,
-                //           child: Column(
-                //             children: [
-                //               SizedBox(height: context.height * 0.01),
-                //               AppBar(
-                //                 backgroundColor: Colors.transparent,
-                //                 elevation: 0,
-                //                 iconTheme:
-                //                     const IconThemeData(color: Colors.black),
-                //                 title: Text(
-                //                   "authChooseCountry".tr(),
-                //                   style: const TextStyle(color: Colors.black),
-                //                 ),
-                //                 actions: [
-                //                   Padding(
-                //                     padding: EdgeInsets.only(
-                //                         right: context.width * 0.045),
-                //                     child: const Icon(Icons.search),
-                //                   ),
-                //                 ],
-                //               ),
-                //               SizedBox(
-                //                 height: context.height * 0.003,
-                //               ),
-                //               const Divider(color: Colors.black, height: 15),
-                //               Expanded(
-                //                 child: ListView.builder(
-                //                   itemCount: 9,
-                //                   itemBuilder: (context, index) {
-                //                     return InkWell(
-                //                       onTap: () {},
-                //                       child: ListTile(
-                //                         leading: const CircleAvatar(),
-                //                         title: Text(regions[index]),
-                //                         trailing: Text(codePhoneNum[index]),
-                //                       ),
-                //                     );
-                //                   },
-                //                 ),
-                //               ),
-                //             ],
-                //           ),
-                //         );
-                //       },
-                //     );
-                //   },
-                //   child: Container(
-                //     decoration: BoxDecoration(
-                //       border: Border.all(color: Colors.grey),
-                //       borderRadius:
-                //           const BorderRadius.all(Radius.circular(8)),
-                //     ),
-                //     child: Padding(
-                //       padding: EdgeInsets.symmetric(
-                //         horizontal: context.width * 0.05,
-                //         vertical: context.height * 0.014,
-                //       ),
-                //       child: Row(
-                //         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                //         children: [
-                //           Text(
-                //             'authCountry'.tr(),
-                //             style: const TextStyle(
-                //               fontWeight: FontWeight.w400,
-                //               fontSize: 16,
-                //             ),
-                //           ),
-                //           const Icon(Icons.keyboard_arrow_right_outlined),
-                //         ],
-                //       ),
-                //     ),
-                //   ),
-                // ),
                 SizedBox(
                   height: context.height * 0.03,
                 ),
-                // Container(
-                //   decoration:
-                //       BoxDecoration(border: Border.all(color: Colors.grey)),
-                //   child: Row(
-                //     children: [
-                //       SizedBox(width: context.width * 0.045),
-                //       Expanded(
-                //         flex: 2,
-                //         child: TextFormField(
-                //           decoration: const InputDecoration(
-                //             border: InputBorder.none,
-                //             hintText: "+",
-                //           ),
-                //         ),
-                //       ),
-                //       const Text("|"),
-                //       SizedBox(width: context.width * 0.03),
-                //       Expanded(
-                //         flex: 9,
-                //         child: TextFormField(
-                //           decoration:
-                //               const InputDecoration(border: InputBorder.none),
-                //         ),
-                //       ),
-                //     ],
-                //   ),
-                // ),
                 IntlPhoneField(
                   controller:
                       context.watch<AuthProvider>().phoneNumberController,
@@ -182,41 +70,126 @@ class _AuthScreenState extends State<AuthScreen> {
                       borderSide: BorderSide(),
                     ),
                   ),
-                  // initialCountryCode: 'IN',
+                  initialCountryCode: 'UZ',
                   onChanged: (value) {
                     debugPrint(value.completeNumber);
                     debugPrint(value.countryCode);
                     debugPrint(value.countryISOCode);
                     debugPrint(value.number);
                   },
-                )
-                // SizedBox(
-                //   width: double.infinity,
-                //   height: context.height * 0.06,
-                //   child: TextFormField(
-                //     decoration: InputDecoration(
-                //       border: OutlineInputBorder(
-                //         borderRadius: BorderRadius.circular(8),
+                ),
+                // InkWell(
+                //   onTap: () {
+                //     showModalBottomSheet(
+                //       context: context,
+                //       isScrollControlled: true,
+                //       shape: const RoundedRectangleBorder(
+                //         borderRadius: BorderRadius.all(Radius.circular(15)),
                 //       ),
-                //       prefixIcon: Padding(
-                //         padding: EdgeInsets.only(
-                //           top: context.height * 0.018,
-                //           left: context.width * 0.04,
-                //           right: context.width * 0.03,
-                //         ),
-                //         child: const Padding(
-                //           padding: EdgeInsets.only(bottom: 13),
-                //           child: Text(
-                //             "+ |",
-                //             style: TextStyle(
-                //               fontWeight: FontWeight.w400,
-                //               fontSize: 15,
-                //             ),
+                //       builder: (BuildContext context) {
+                //         return SizedBox(
+                //           height: 600,
+                //           child: Column(
+                //             children: [
+                //               SizedBox(height: context.height * 0.015),
+                //               AppBar(
+                //                 iconTheme:
+                //                     const IconThemeData(color: Colors.black),
+                //                 title: Text(
+                //                   "authChooseCountry".tr(),
+                //                   style: const TextStyle(color: Colors.black),
+                //                 ),
+                //                 backgroundColor: Colors.transparent,
+                //                 elevation: 0,
+                //                 actions: [
+                //                   const Icon(Icons.search),
+                //                   SizedBox(width: context.width * 0.045),
+                //                 ],
+                //               ),
+                //               SizedBox(height: context.height * 0.005),
+                //               const Divider(color: Colors.black),
+                //               Expanded(
+                //                 child: ListView.builder(
+                //                   itemCount: regions.length,
+                //                   itemBuilder: (context, index) {
+                //                     return InkWell(
+                //                       onTap: () {
+                //                         setState(() {
+                //                           // text = codePhoneNum[index];
+                //                         });
+                //                         Navigator.of(context).pop();
+                //                       },
+                //                       child: ListTile(
+                //                         leading: const CircleAvatar(),
+                //                         title: Text(regions[index].toString()),
+                //                         trailing: Text(
+                //                             codePhoneNum[index].toString()),
+                //                       ),
+                //                     );
+                //                   },
+                //                 ),
+                //               )
+                //             ],
+                //           ),
+                //         );
+                //       },
+                //     );
+                //   },
+                //   child: Container(
+                //     width: context.width * 0.9,
+                //     height: context.height * 0.06,
+                //     decoration: BoxDecoration(
+                //       border: Border.all(color: Colors.grey),
+                //       borderRadius:
+                //           const BorderRadius.all(Radius.circular(10.0)),
+                //     ),
+                //     child: Padding(
+                //       padding: EdgeInsets.symmetric(
+                //           horizontal: context.width * 0.03),
+                //       child: Row(
+                //         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                //         children: [
+                //           Text(
+                //             "authCountry".tr(),
+                //             style: const TextStyle(
+                //                 fontSize: 15, fontWeight: FontWeight.w500),
+                //           ),
+                //           const Icon(Icons.keyboard_arrow_right_outlined),
+                //         ],
+                //       ),
+                //     ),
+                //   ),
+                // ),
+                // SizedBox(height: context.height * 0.02),
+                // Container(
+                //   width: context.width * 0.9,
+                //   decoration: BoxDecoration(
+                //     border: Border.all(color: Colors.grey),
+                //     borderRadius: const BorderRadius.all(Radius.circular(10.0)),
+                //   ),
+                //   child: Row(
+                //     children: [
+                //       SizedBox(width: context.width * 0.03),
+                //       Expanded(
+                //         flex: 1,
+                //         child: TextFormField(
+                //           decoration: InputDecoration(
+                //             border: InputBorder.none,
+                //             // prefix: Text(text),
                 //           ),
                 //         ),
                 //       ),
-                //       labelText: "authInputPhoneNumber".tr(),
-                //     ),
+                //       const Text("|"),
+                //       SizedBox(width: context.width * 0.03),
+                //       Expanded(
+                //         flex: 9,
+                //         child: TextFormField(
+                //           decoration: InputDecoration(
+                //               border: InputBorder.none,
+                //               hintText: "authInputPhoneNumber".tr()),
+                //         ),
+                //       ),
+                //     ],
                 //   ),
                 // ),
               ],
@@ -259,14 +232,14 @@ class _AuthScreenState extends State<AuthScreen> {
 
   // Code Phone Number
   List codePhoneNum = [
-    "+971",
-    "+966",
-    "+971",
-    "+998",
-    "+54",
-    "+994",
-    "+61",
-    "+49",
-    "+55",
+    "971",
+    "966",
+    "971",
+    "998",
+    "54",
+    "994",
+    "61",
+    "49",
+    "55",
   ];
 }

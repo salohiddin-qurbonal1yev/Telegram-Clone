@@ -1,17 +1,16 @@
-// ignore_for_file: no_leading_underscores_for_local_identifiers, unused_local_variable
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_native_contact_picker/flutter_native_contact_picker.dart';
 import 'package:unired_telegram/core/extensions/build_context_extension.dart';
+import 'package:unired_telegram/view/menu/calls_page.dart';
+import 'package:unired_telegram/view/menu/contact_page.dart';
+import 'package:unired_telegram/view/menu/settings_page.dart';
 
 class HomeDrawer extends StatelessWidget {
   const HomeDrawer({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final FlutterContactPicker _contactPicker = FlutterContactPicker();
     int index = 0;
-    Contact? _contact;
     return Drawer(
       child: ListView(
         padding: EdgeInsets.zero,
@@ -23,7 +22,10 @@ class HomeDrawer extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const CircleAvatar(radius: 40),
+                CircleAvatar(
+                    backgroundImage: NetworkImage(
+                        "https://source.unsplash.com/random/$index"),
+                    radius: 40),
                 SizedBox(
                   height: context.height * 0.01,
                 ),
@@ -59,11 +61,11 @@ class HomeDrawer extends StatelessWidget {
           ),
           ListTile(
             onTap: () async {
-              Contact? contact = await _contactPicker.selectContact();
-              _contact = contact;
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const ContactPage()));
             },
             leading: const Icon(
-              Icons.perm_contact_cal_outlined,
+              Icons.perm_identity_outlined,
               color: Colors.grey,
               size: 28,
             ),
@@ -73,6 +75,10 @@ class HomeDrawer extends StatelessWidget {
             ),
           ),
           ListTile(
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const CallsPage()));
+            },
             leading: const Icon(
               Icons.call,
               color: Colors.grey,
@@ -106,6 +112,12 @@ class HomeDrawer extends StatelessWidget {
             ),
           ),
           ListTile(
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const SettingsPage()));
+            },
             leading: const Icon(
               Icons.settings,
               color: Colors.grey,
