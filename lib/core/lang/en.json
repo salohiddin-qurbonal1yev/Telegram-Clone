@@ -40,5 +40,7 @@
   "menuSettingsFAQ": "Telegram FAQ",
   "menuSettingsPrivacyPolicy": "Privacy Policy",
   "menuNewGroupMembers": "up to 200000 members",
-  "menuNewGroupTextField": "Who would you like to add?"
+  "menuNewGroupTextField": "Who would you like to add?",
+  "menuInviteFriendsSearch": "Search contacts",
+  "menuInviteFriendsShareTelegram": "Share Telegram..."
 }

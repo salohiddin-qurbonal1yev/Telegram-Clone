@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:unired_telegram/core/router/router.dart';
+// import 'package:unired_telegram/core/router/router.dart';
 import 'package:unired_telegram/provider/auth/auth_provider.dart';
 import 'package:unired_telegram/provider/language_provider.dart';
 import 'package:unired_telegram/provider/otp_provider.dart';
@@ -23,7 +23,7 @@ void main() async {
       Locale('ru'),
     ],
     path: 'lib/core/lang',
-    // Multi Providers    
+    // Multi Providers
     child: MultiProvider(
       providers: [
         ChangeNotifierProvider(

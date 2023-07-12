@@ -191,11 +191,11 @@ class SettingsPage extends StatelessWidget {
                           Row(
                             children: [
                               Icon(Icons.message_outlined,
-                                  size: 25, color: Colors.grey.shade600),
+                                  size: 26, color: Colors.grey.shade600),
                               SizedBox(width: context.width * 0.045),
                               Text(
                                 "menuSettingsChatSettings".tr(),
-                                style: const TextStyle(fontSize: 17),
+                                style: const TextStyle(fontSize: 18),
                               ),
                             ],
                           ),
@@ -214,11 +214,11 @@ class SettingsPage extends StatelessWidget {
                           Row(
                             children: [
                               Icon(Icons.lock_outline_rounded,
-                                  size: 25, color: Colors.grey.shade600),
+                                  size: 26, color: Colors.grey.shade600),
                               SizedBox(width: context.width * 0.045),
                               Text(
                                 "menuSettingsPrivacy".tr(),
-                                style: const TextStyle(fontSize: 17),
+                                style: const TextStyle(fontSize: 18),
                               ),
                             ],
                           ),
@@ -237,11 +237,11 @@ class SettingsPage extends StatelessWidget {
                           Row(
                             children: [
                               Icon(Icons.notifications_none_outlined,
-                                  size: 25, color: Colors.grey.shade600),
+                                  size: 26, color: Colors.grey.shade600),
                               SizedBox(width: context.width * 0.045),
                               Text(
                                 "menuSettingsNotifications".tr(),
-                                style: const TextStyle(fontSize: 17),
+                                style: const TextStyle(fontSize: 18),
                               ),
                             ],
                           ),
@@ -260,11 +260,11 @@ class SettingsPage extends StatelessWidget {
                           Row(
                             children: [
                               Icon(Icons.data_usage_outlined,
-                                  size: 25, color: Colors.grey.shade600),
+                                  size: 26, color: Colors.grey.shade600),
                               SizedBox(width: context.width * 0.045),
                               Text(
                                 "menuSettingsData".tr(),
-                                style: const TextStyle(fontSize: 17),
+                                style: const TextStyle(fontSize: 18),
                               ),
                             ],
                           ),
@@ -283,11 +283,11 @@ class SettingsPage extends StatelessWidget {
                           Row(
                             children: [
                               Icon(Icons.battery_charging_full_outlined,
-                                  size: 25, color: Colors.grey.shade600),
+                                  size: 26, color: Colors.grey.shade600),
                               SizedBox(width: context.width * 0.045),
                               Text(
                                 "menuSettingsPowerSaving".tr(),
-                                style: const TextStyle(fontSize: 17),
+                                style: const TextStyle(fontSize: 18),
                               ),
                             ],
                           ),
@@ -306,11 +306,11 @@ class SettingsPage extends StatelessWidget {
                           Row(
                             children: [
                               Icon(Icons.folder_open_rounded,
-                                  size: 25, color: Colors.grey.shade600),
+                                  size: 26, color: Colors.grey.shade600),
                               SizedBox(width: context.width * 0.045),
                               Text(
                                 "menuSettingsChatFolders".tr(),
-                                style: const TextStyle(fontSize: 17),
+                                style: const TextStyle(fontSize: 18),
                               ),
                             ],
                           ),
@@ -329,11 +329,11 @@ class SettingsPage extends StatelessWidget {
                           Row(
                             children: [
                               Icon(Icons.devices,
-                                  size: 25, color: Colors.grey.shade600),
+                                  size: 26, color: Colors.grey.shade600),
                               SizedBox(width: context.width * 0.045),
                               Text(
                                 "menuSettingsDevices".tr(),
-                                style: const TextStyle(fontSize: 17),
+                                style: const TextStyle(fontSize: 18),
                               ),
                             ],
                           ),
@@ -358,11 +358,11 @@ class SettingsPage extends StatelessWidget {
                                 Row(
                                   children: [
                                     Icon(Icons.language_outlined,
-                                        size: 25, color: Colors.grey.shade600),
+                                        size: 26, color: Colors.grey.shade600),
                                     SizedBox(width: context.width * 0.045),
                                     Text(
                                       "menuSettingsLanguage".tr(),
-                                      style: const TextStyle(fontSize: 17),
+                                      style: const TextStyle(fontSize: 18),
                                     ),
                                   ],
                                 ),
@@ -378,7 +378,7 @@ class SettingsPage extends StatelessWidget {
                               ],
                             ),
                           ),
-                          SizedBox(height: context.height * 0.01),
+                          SizedBox(height: context.height * 0.015),
                         ],
                       ),
                     ),
@@ -397,7 +397,7 @@ class SettingsPage extends StatelessWidget {
                               size: 28, color: Colors.deepPurple.shade300),
                           SizedBox(width: context.width * 0.045),
                           const Text("Telegram Premium",
-                              style: TextStyle(fontSize: 17)),
+                              style: TextStyle(fontSize: 18)),
                         ],
                       ),
                     ),
@@ -425,11 +425,11 @@ class SettingsPage extends StatelessWidget {
                           Row(
                             children: [
                               Icon(Icons.question_answer_sharp,
-                                  size: 25, color: Colors.grey.shade600),
+                                  size: 26, color: Colors.grey.shade600),
                               SizedBox(width: context.width * 0.045),
                               Text(
                                 "menuSettingsAskQuestion".tr(),
-                                style: const TextStyle(fontSize: 17),
+                                style: const TextStyle(fontSize: 18),
                               ),
                             ],
                           ),
@@ -447,11 +447,11 @@ class SettingsPage extends StatelessWidget {
                           Row(
                             children: [
                               Icon(Icons.question_mark_outlined,
-                                  size: 25, color: Colors.grey.shade600),
+                                  size: 26, color: Colors.grey.shade600),
                               SizedBox(width: context.width * 0.045),
                               Text(
                                 "menuSettingsFAQ".tr(),
-                                style: const TextStyle(fontSize: 17),
+                                style: const TextStyle(fontSize: 18),
                               ),
                             ],
                           ),
@@ -469,23 +469,28 @@ class SettingsPage extends StatelessWidget {
                           Row(
                             children: [
                               Icon(Icons.library_add_check_outlined,
-                                  size: 25, color: Colors.grey.shade600),
+                                  size: 26, color: Colors.grey.shade600),
                               SizedBox(width: context.width * 0.045),
                               Text(
                                 "menuSettingsPrivacyPolicy".tr(),
-                                style: const TextStyle(fontSize: 17),
+                                style: const TextStyle(fontSize: 18),
                               ),
                             ],
                           ),
-                          SizedBox(height: context.height * 0.015),
+                          SizedBox(height: context.height * 0.018),
                         ],
                       ),
                     ),
                     Container(
                       width: double.infinity,
-                      height: context.height * 0.03,
+                      height: context.height * 0.04,
                       decoration:
                           BoxDecoration(color: Colors.blueGrey.shade100),
+                      child: Padding(
+                        padding: EdgeInsets.only(top: context.height * 0.008),
+                        child: const Text("Unired Telegram",
+                            textAlign: TextAlign.center),
+                      ),
                     ),
                   ],
                 ),

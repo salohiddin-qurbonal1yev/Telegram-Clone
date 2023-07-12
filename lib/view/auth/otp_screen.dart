@@ -1,8 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:pinput/pinput.dart';
 import 'package:provider/provider.dart';
 import 'package:unired_telegram/core/extensions/build_context_extension.dart';
+import 'package:unired_telegram/core/widgets/pinput/src/pinput.dart';
 import 'package:unired_telegram/provider/otp_provider.dart';
 
 class OtpScreen extends StatelessWidget {

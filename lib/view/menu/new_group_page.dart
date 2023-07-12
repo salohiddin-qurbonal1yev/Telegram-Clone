@@ -1,6 +1,7 @@
 /*
 11.07.2023
 */
+
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:unired_telegram/core/extensions/build_context_extension.dart';
@@ -36,14 +37,15 @@ class NewGroupPage extends StatelessWidget {
             padding: EdgeInsets.only(left: context.width * 0.03),
             child: SizedBox(
               width: double.infinity,
-              height: context.height * 0.04,
+              height: context.height * 0.05,
               child: TextFormField(
                 decoration: InputDecoration(
                     hintText: "menuNewGroupTextField".tr(),
                     border: InputBorder.none,
-                    hintStyle: TextStyle(color: Colors.grey.shade500),
+                    hintStyle:
+                        TextStyle(color: Colors.grey.shade500, fontSize: 17),
                     contentPadding:
-                        EdgeInsets.only(top: context.height * 0.003)),
+                        EdgeInsets.only(top: context.height * 0.01)),
               ),
             ),
           ),
