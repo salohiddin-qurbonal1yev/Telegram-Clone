@@ -42,5 +42,6 @@
   "menuNewGroupMembers": "up to 200000 members",
   "menuNewGroupTextField": "Who would you like to add?",
   "menuInviteFriendsSearch": "Search contacts",
-  "menuInviteFriendsShareTelegram": "Share Telegram..."
+  "menuInviteFriendsShareTelegram": "Share Telegram...",
+  "menuSettingsProfilePhoto": "Choose photo or video"
 }

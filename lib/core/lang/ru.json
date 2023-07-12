@@ -42,5 +42,6 @@
   "menuNewGroupMembers": "до 200000 участников",
   "menuNewGroupTextField": "Ково бы Вы хотели пригласить?",
   "menuInviteFriendsSearch": "Поиск контактов",
-  "menuInviteFriendsShareTelegram": "Пригласить в Telegram..."
+  "menuInviteFriendsShareTelegram": "Пригласить в Telegram...",
+  "menuSettingsProfilePhoto": "Выберите фотографию или видео"
 }

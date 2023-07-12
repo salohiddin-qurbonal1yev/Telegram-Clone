@@ -2,12 +2,36 @@
 11.07.2023
 */
 
+import 'dart:io';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:unired_telegram/core/extensions/build_context_extension.dart';
 
-class SettingsPage extends StatelessWidget {
+class SettingsPage extends StatefulWidget {
   const SettingsPage({Key? key}) : super(key: key);
+
+  @override
+  State<SettingsPage> createState() => _SettingsPageState();
+}
+
+class _SettingsPageState extends State<SettingsPage> {
+  // File image
+  File? image;
+
+  // Pick image service
+  Future pickImage(ImageSource source) async {
+    try {
+      final image = await ImagePicker().pickImage(source: source);
+      if (image == null) return;
+
+      final imageTemporary = File(image.path);
+      setState(() => this.image = imageTemporary);
+    } on PlatformException catch (e) {
+      debugPrint('Failed to pick image: $e');
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -56,10 +80,122 @@ class SettingsPage extends StatelessWidget {
                       SizedBox(height: context.height * 0.035),
                       Row(
                         children: [
-                          const CircleAvatar(
+                          Container(
+                            width: 50,
+                            height: 50,
+                            decoration: BoxDecoration(
+                              border: Border.all(),
+                              borderRadius: const BorderRadius.all(
+                                Radius.circular(30),
+                              ),
+                            ),
+                            child: image != null
+                                ? Image.file(image!, fit: BoxFit.fill)
+                                : const FlutterLogo(),
+                          ),
+                          CircleAvatar(
                             radius: 30,
-                            backgroundImage: NetworkImage(
-                              "https://source.unsplash.com/random/?99",
+                            child: InkWell(
+                              onTap: () {
+                                // Show modal bottom sheet
+                                showModalBottomSheet(
+                                  context: context,
+                                  isScrollControlled: true,
+                                  shape: const RoundedRectangleBorder(
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(15)),
+                                  ),
+                                  builder: (BuildContext context) {
+                                    return SizedBox(
+                                      height: context.height * 0.7,
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          SizedBox(
+                                              height: context.height * 0.03),
+                                          Padding(
+                                            padding: EdgeInsets.only(
+                                                left: context.width * 0.055),
+                                            child: Text(
+                                              "menuSettingsProfilePhoto".tr(),
+                                              style: const TextStyle(
+                                                  fontSize: 18,
+                                                  fontWeight: FontWeight.w500),
+                                            ),
+                                          ),
+                                          SizedBox(
+                                              height: context.height * 0.02),
+                                          Padding(
+                                            padding: EdgeInsets.symmetric(
+                                                horizontal:
+                                                    context.width * 0.03),
+                                            child: Row(
+                                              children: [
+                                                InkWell(
+                                                  onTap: () {
+                                                    pickImage(
+                                                        ImageSource.camera);
+                                                  },
+                                                  // Camera container
+                                                  child: Container(
+                                                    decoration: BoxDecoration(
+                                                      color: Colors
+                                                          .blueGrey.shade200,
+                                                      borderRadius:
+                                                          const BorderRadiusDirectional
+                                                              .only(
+                                                        topStart:
+                                                            Radius.circular(10),
+                                                      ),
+                                                    ),
+                                                    child: const Padding(
+                                                      padding:
+                                                          EdgeInsets.all(50),
+                                                      child: Icon(
+                                                        Icons.camera_alt,
+                                                        color: Colors.white,
+                                                        size: 30,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ),
+                                                SizedBox(
+                                                    width:
+                                                        context.width * 0.03),
+                                                InkWell(
+                                                  onTap: () {
+                                                    pickImage(
+                                                        ImageSource.gallery);
+                                                  },
+                                                  // Gallery container
+                                                  child: Container(
+                                                    decoration: BoxDecoration(
+                                                      color: Colors
+                                                          .blueGrey.shade200,
+                                                    ),
+                                                    child: const Padding(
+                                                      padding:
+                                                          EdgeInsets.all(50),
+                                                      child: Icon(
+                                                        Icons.image,
+                                                        color: Colors.white,
+                                                        size: 30,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    );
+                                  },
+                                );
+                              },
+                              child: const Icon(Icons.camera_alt_outlined,
+                                  color: Colors.white),
                             ),
                           ),
                           SizedBox(width: context.width * 0.05),
