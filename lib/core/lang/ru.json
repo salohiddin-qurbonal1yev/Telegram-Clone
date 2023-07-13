@@ -46,5 +46,10 @@
   "menuSettingsProfilePhoto": "Выберите фотографию или видео",
   "menuPeopleNearbyTitle1": "Вы можете быстро связаться с теми, кто \n находится рядом с Вами и зашёл в этот раздел, а \n также найти локальные группы.",
   "menuPeopleNearbyTitle2": "Для этого необходимо разрешить приложению \n доступ к геопозиции.",
-  "menuPeopleNearbyButton": "Включить"
+  "menuPeopleNearbyButton": "Включить",
+  "menuSettingsLanguageTMessage": "Перевод сообщений",
+  "menuSettingsLanguageSwitch1": "Показывать кнопку <Перевести>",
+  "menuSettingsLanguageSwitch2": "Переводить чаты целиком",
+  "menuSettingsLanguageTitle1": "Кнопка <Перевести> появится в меню по нажатию на \n текстовое сообщение.",
+  "menuSettingsLanguageTitle2": "Google может иметь доступ к тексту сообщений, \n которые Вы переводите."
 }

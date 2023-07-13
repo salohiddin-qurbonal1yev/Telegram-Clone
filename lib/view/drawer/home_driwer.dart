@@ -6,7 +6,7 @@ import 'package:unired_telegram/view/menu/contact_page.dart';
 import 'package:unired_telegram/view/menu/invite_friends_page.dart';
 import 'package:unired_telegram/view/menu/new_group_page.dart';
 import 'package:unired_telegram/view/menu/people_nearby_page.dart';
-import 'package:unired_telegram/view/menu/settings_page.dart';
+import 'package:unired_telegram/view/menu/settings/settings_page.dart';
 
 class HomeDrawer extends StatelessWidget {
   const HomeDrawer({Key? key}) : super(key: key);

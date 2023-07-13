@@ -2,7 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:unired_telegram/core/extensions/build_context_extension.dart';
-import 'package:unired_telegram/provider/language_provider.dart';
+import 'package:unired_telegram/provider/translate/language_provider.dart';
 import 'package:unired_telegram/view/auth/auth_screen.dart';
 
 class StartScreen extends StatelessWidget {

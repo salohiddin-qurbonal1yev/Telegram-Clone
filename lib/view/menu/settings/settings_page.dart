@@ -7,7 +7,10 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:provider/provider.dart';
 import 'package:unired_telegram/core/extensions/build_context_extension.dart';
+import 'package:unired_telegram/provider/translate/language_provider.dart';
+import 'package:unired_telegram/view/menu/settings/settings_language_page.dart';
 
 class SettingsPage extends StatefulWidget {
   const SettingsPage({Key? key}) : super(key: key);
@@ -35,6 +38,13 @@ class _SettingsPageState extends State<SettingsPage> {
 
   @override
   Widget build(BuildContext context) {
+    return ChangeNotifierProvider(
+      create: (context) => LanguageProvider(),
+      builder: (context, child) => _scaffold(context),
+    );
+  }
+
+  Scaffold _scaffold(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xff527DA3),
       // Body
@@ -485,9 +495,16 @@ class _SettingsPageState extends State<SettingsPage> {
                             ),
                           ),
                           SizedBox(height: context.height * 0.013),
+
                           // On language add Inkwell (){}
                           InkWell(
-                            onTap: () {},
+                            onTap: () async {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const SettingsLanguagePage()));
+                            },
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [

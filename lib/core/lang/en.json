@@ -46,5 +46,10 @@
   "menuSettingsProfilePhoto": "Choose photo or video",
   "menuPeopleNearbyTitle1": "Quickly add people nearby who are also viewing this \n section and discover local group chats.",
   "menuPeopleNearbyTitle2": "Please turn on location services to enable this \n feature",
-  "menuPeopleNearbyButton": "Turn On"
+  "menuPeopleNearbyButton": "Turn On",
+  "menuSettingsLanguageTMessage": "Translate Messages",
+  "menuSettingsLanguageSwitch1": "Show Translate Button",
+  "menuSettingsLanguageSwitch2": "Translate Entire Chats",
+  "menuSettingsLanguageTitle1": "The `Translate` button will appear when you make a single \n tap on a text message.",
+  "menuSettingsLanguageTitle2": "Google may have access to the text of messages you \n translate."
 }
