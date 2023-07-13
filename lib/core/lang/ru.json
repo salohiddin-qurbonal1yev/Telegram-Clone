@@ -43,5 +43,8 @@
   "menuNewGroupTextField": "Ково бы Вы хотели пригласить?",
   "menuInviteFriendsSearch": "Поиск контактов",
   "menuInviteFriendsShareTelegram": "Пригласить в Telegram...",
-  "menuSettingsProfilePhoto": "Выберите фотографию или видео"
+  "menuSettingsProfilePhoto": "Выберите фотографию или видео",
+  "menuPeopleNearbyTitle1": "Вы можете быстро связаться с теми, кто \n находится рядом с Вами и зашёл в этот раздел, а \n также найти локальные группы.",
+  "menuPeopleNearbyTitle2": "Для этого необходимо разрешить приложению \n доступ к геопозиции.",
+  "menuPeopleNearbyButton": "Включить"
 }

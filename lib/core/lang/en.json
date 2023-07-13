@@ -43,5 +43,8 @@
   "menuNewGroupTextField": "Who would you like to add?",
   "menuInviteFriendsSearch": "Search contacts",
   "menuInviteFriendsShareTelegram": "Share Telegram...",
-  "menuSettingsProfilePhoto": "Choose photo or video"
+  "menuSettingsProfilePhoto": "Choose photo or video",
+  "menuPeopleNearbyTitle1": "Quickly add people nearby who are also viewing this \n section and discover local group chats.",
+  "menuPeopleNearbyTitle2": "Please turn on location services to enable this \n feature",
+  "menuPeopleNearbyButton": "Turn On"
 }

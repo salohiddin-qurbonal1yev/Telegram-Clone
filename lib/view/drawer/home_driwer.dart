@@ -5,6 +5,7 @@ import 'package:unired_telegram/view/menu/calls_page.dart';
 import 'package:unired_telegram/view/menu/contact_page.dart';
 import 'package:unired_telegram/view/menu/invite_friends_page.dart';
 import 'package:unired_telegram/view/menu/new_group_page.dart';
+import 'package:unired_telegram/view/menu/people_nearby_page.dart';
 import 'package:unired_telegram/view/menu/settings_page.dart';
 
 class HomeDrawer extends StatelessWidget {
@@ -97,6 +98,10 @@ class HomeDrawer extends StatelessWidget {
             ),
           ),
           ListTile(
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const PeopleNearbyPage()));
+            },
             leading: const Icon(
               Icons.person_pin_circle,
               color: Colors.grey,

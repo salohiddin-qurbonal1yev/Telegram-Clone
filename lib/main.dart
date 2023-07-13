@@ -5,6 +5,7 @@ import 'package:unired_telegram/core/router/router.dart';
 import 'package:unired_telegram/provider/auth/auth_provider.dart';
 import 'package:unired_telegram/provider/language_provider.dart';
 import 'package:unired_telegram/provider/otp_provider.dart';
+import 'package:unired_telegram/view/home/home_page.dart';
 
 void main() async {
   // Initialize widgets flutter binding
@@ -50,9 +51,9 @@ class MyApp extends StatelessWidget {
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
       debugShowCheckedModeBanner: false,
-      onGenerateRoute: RouteGenerator.router.onGenerate,
-      initialRoute: 'start',
-      // home: const HomePage(),
+      // onGenerateRoute: RouteGenerator.router.onGenerate,
+      // initialRoute: 'start',
+      home: const HomePage(),
     );
   }
 }
