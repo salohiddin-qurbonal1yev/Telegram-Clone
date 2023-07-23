@@ -129,7 +129,7 @@ class _SettingsLanguagePageState extends State<SettingsLanguagePage> {
           Container(
             width: double.infinity,
             decoration:
-                BoxDecoration(color: Color.fromARGB(255, 231, 231, 231)),
+                const BoxDecoration(color: Color.fromARGB(255, 231, 231, 231)),
             child: Padding(
               padding: EdgeInsets.symmetric(
                   horizontal: context.width * 0.038,
